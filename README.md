@@ -17,7 +17,9 @@ Here is a screenshot of the game.
 
 Usage:
 -----
+    new GrabSquares( DOM id , size )
 
+code below here will porducts the sample in picture
     $ ->
-        a = new GameLogic('gamepart', 10)
+        new GrabSquares('gamepart', 10)
 

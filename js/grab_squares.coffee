@@ -1,4 +1,4 @@
-class GameLogic
+class GrabSquares
 	constructor: (id, @size) ->
 		if not @size
 			@size = 3
@@ -101,4 +101,4 @@ class GameLogic
 		@updateScore()
 
 $ ->
-	a = new GameLogic('gamepart', 10)
+	new GrabSquares('gamepart', 10)

@@ -1,8 +1,8 @@
 (function() {
-  var GameLogic;
+  var GrabSquares;
 
-  GameLogic = (function() {
-    function GameLogic(id, size) {
+  GrabSquares = (function() {
+    function GrabSquares(id, size) {
       var board, i, j, _i, _j, _k, _l, _m, _n, _ref, _ref1, _ref2, _ref3, _ref4, _ref5,
         _this = this;
 
@@ -98,14 +98,14 @@
       });
     }
 
-    GameLogic.prototype.anotherPlayer = function() {
+    GrabSquares.prototype.anotherPlayer = function() {
       if (this.currentPlayer === 'p1') {
         return 'p2';
       }
       return 'p1';
     };
 
-    GameLogic.prototype.switchPlayer = function() {
+    GrabSquares.prototype.switchPlayer = function() {
       this.main.removeClass(this.currentPlayer);
       this.widget.find('.current').removeClass(this.currentPlayer);
       this.currentPlayer = this.anotherPlayer();
@@ -113,12 +113,12 @@
       return this.widget.find('.current').addClass(this.currentPlayer);
     };
 
-    GameLogic.prototype.updateScore = function() {
+    GrabSquares.prototype.updateScore = function() {
       this.widget.find('.Nplayer1').text((this.main.find('.grid.p1').length));
       return this.widget.find('.Nplayer2').text((this.main.find('.grid.p2').length));
     };
 
-    GameLogic.prototype.checkEdge = function(type, ii, jj) {
+    GrabSquares.prototype.checkEdge = function(type, ii, jj) {
       var changed, square1, square2, x, y, _i, _len, _ref, _ref1;
 
       square1 = type === 'v' ? [jj - 1, ii] : [jj, ii - 1];
@@ -140,14 +140,12 @@
       return this.updateScore();
     };
 
-    return GameLogic;
+    return GrabSquares;
 
   })();
 
   $(function() {
-    var a;
-
-    return a = new GameLogic('gamepart', 10);
+    return new GrabSquares('gamepart', 10);
   });
 
 }).call(this);

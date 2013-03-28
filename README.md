@@ -19,7 +19,8 @@ Usage:
 -----
     new GrabSquares( DOM id , size )
 
-code below here will porducts the sample in picture
+code below here will porducts the sample in picture.
+
     $ ->
         new GrabSquares('gamepart', 10)
 

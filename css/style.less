@@ -1,0 +1,139 @@
+.xxrgame{
+	position : relative;
+	margin : 20px;
+	.board{
+		-webkit-box-shadow: 0px 0px 10px 5px #CCC;
+		background : #CCC;
+		@radius:4px;
+		position : relative;
+		.node{
+			position : absolute;
+			width  : @radius * 2;
+			height : @radius * 2;
+			border-radius : 100%;
+			background : black;
+			z-index : 10;
+		}
+		.edge{
+			position : absolute;
+			width : 50px / 1.414;
+			height : 50px / 1.414;
+			z-index : 3;
+			opacity : 0;
+			-webkit-transform-origin : top left;
+			-webkit-transition : opacity 0.2s ease-in;
+			&:hover{
+				opacity : 0.5;
+			}
+		}
+		.vertical{
+			-webkit-transform : translate(@radius, @radius) rotate(45deg);
+		}
+		.horizonal{
+			-webkit-transform : translate(@radius, @radius) rotate(-45deg);
+		}
+		.pushedp1{
+			opacity : 1 !important;
+			background : url('../img/1.png') !important;
+		}
+		.pushedp2{
+			opacity : 1 !important;
+			background : url('../img/2.png') !important;
+		}
+		.grid{
+			-webkit-transform : translate(@radius, @radius);
+			position : absolute;
+			width : 50px;
+			height : 50px;
+			z-index : -1;
+			background : #CCC;
+			opacity : 0.8;
+			-webkit-transition : background 0.2s ease-in;
+		}
+		.grid.p1{
+			background : blue!important;
+			z-index : 1;
+		}
+		.grid.p2{
+			background : red!important;
+			z-index : 1;
+		}
+	}
+	.score{
+		font-family : "微软雅黑";
+		position : absolute;
+		background : #CCC;
+		padding : 10px;
+		border-radius : 25px;
+		-webkit-box-shadow: 5px 5px 5px #888,
+							inset 5px 5px 5px #EEE;
+		.player{
+			width : 60px;
+			.Nplayer1{
+				margin-left : 10px;
+				background : rgba(0, 0, 255, 0.7);
+				height : 20px;
+				width : 20px;
+				display : inline-block;
+				text-align : right;
+				padding-right : 5px;
+				-webkit-box-shadow: 2px 0px 2px rgba(0,0,255,0.7),
+				inset 2px 0px 2px #CCC;
+			}
+			.Nplayer2{
+				background : rgba(255, 0, 0, 0.7);
+				margin-left : 10px;
+				height : 20px;
+				width : 20px;
+				display : inline-block;
+				text-align : right;
+				padding-right : 5px;
+				-webkit-box-shadow: 2px 0px 2px rgba(255,0,0,0.7),
+				inset 2px 0px 2px #CCC;
+			}
+		}
+		.current{
+			margin : 10px 0;
+			width : 70px;
+			height : 20px;
+			font-size : 13px;
+			text-align : center;
+			color : white;
+		}
+		.reset{
+			-webkit-user-select : none;
+			cursor : pointer;
+			padding : 5px;
+			width : 60px;
+			height : 20px;
+			font-size : 13px;
+			line-height : 20px;
+			text-align : center;
+			border-radius : 20px;
+			-webkit-box-shadow: 5px 5px 5px #999,
+							inset 2px 3px 5px #EEE;
+			-webkit-transition : -webkit-box-shadow 0.2s ease-in;
+			&:hover{
+				-webkit-box-shadow: 5px 5px 5px #999,
+							inset 4px 5px 5px #fff;
+			}
+			&:active{
+				-webkit-transition : none;
+				-webkit-box-shadow: inset -5px -5px 5px #FFF,
+							inset 4px 5px 5px #999;
+			}
+		}
+		.current.p1{
+			background : rgba(0, 0, 255, 0.7);
+		}
+		.current.p2{
+			background : rgba(255, 0, 0, 0.7);
+		}
+	}
+	.p1 .edge{
+		background : url('../img/1.png');
+	}
+	.p2 .edge{
+		background : url('../img/2.png');
+	}
+}

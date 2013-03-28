@@ -1,0 +1,18 @@
+.xxrgame{position:relative;margin:20px;}.xxrgame .board{-webkit-box-shadow:0px 0px 10px 5px #CCC;background:#CCC;position:relative;}.xxrgame .board .node{position:absolute;width:8px;height:8px;border-radius:100%;background:black;z-index:10;}
+.xxrgame .board .edge{position:absolute;width:35.360678925035366px;height:35.360678925035366px;z-index:3;opacity:0;-webkit-transform-origin:top left;-webkit-transition:opacity 0.2s ease-in;}.xxrgame .board .edge:hover{opacity:0.5;}
+.xxrgame .board .vertical{-webkit-transform:translate(4px, 4px) rotate(45deg);}
+.xxrgame .board .horizonal{-webkit-transform:translate(4px, 4px) rotate(-45deg);}
+.xxrgame .board .pushedp1{opacity:1 !important;background:url('../img/1.png') !important;}
+.xxrgame .board .pushedp2{opacity:1 !important;background:url('../img/2.png') !important;}
+.xxrgame .board .grid{-webkit-transform:translate(4px, 4px);position:absolute;width:50px;height:50px;z-index:-1;background:#CCC;opacity:0.8;-webkit-transition:background 0.2s ease-in;}
+.xxrgame .board .grid.p1{background:blue!important;z-index:1;}
+.xxrgame .board .grid.p2{background:red!important;z-index:1;}
+.xxrgame .score{font-family:"微软雅黑";position:absolute;background:#CCC;padding:10px;border-radius:25px;-webkit-box-shadow:5px 5px 5px #888,	inset 5px 5px 5px #EEE;}.xxrgame .score .player{width:60px;}.xxrgame .score .player .Nplayer1{margin-left:10px;background:rgba(0, 0, 255, 0.7);height:20px;width:20px;display:inline-block;text-align:right;padding-right:5px;-webkit-box-shadow:2px 0px 2px rgba(0, 0, 255, 0.7),inset 2px 0px 2px #cccccc;}
+.xxrgame .score .player .Nplayer2{background:rgba(255, 0, 0, 0.7);margin-left:10px;height:20px;width:20px;display:inline-block;text-align:right;padding-right:5px;-webkit-box-shadow:2px 0px 2px rgba(255, 0, 0, 0.7),inset 2px 0px 2px #cccccc;}
+.xxrgame .score .current{margin:10px 0;width:70px;height:20px;font-size:13px;text-align:center;color:white;}
+.xxrgame .score .reset{-webkit-user-select:none;cursor:pointer;padding:5px;width:60px;height:20px;font-size:13px;line-height:20px;text-align:center;border-radius:20px;-webkit-box-shadow:5px 5px 5px #999,	inset 2px 3px 5px #EEE;-webkit-transition:-webkit-box-shadow 0.2s ease-in;}.xxrgame .score .reset:hover{-webkit-box-shadow:5px 5px 5px #999,	inset 4px 5px 5px #fff;}
+.xxrgame .score .reset:active{-webkit-transition:none;-webkit-box-shadow:inset -5px -5px 5px #ffffff,inset 4px 5px 5px #999999;}
+.xxrgame .score .current.p1{background:rgba(0, 0, 255, 0.7);}
+.xxrgame .score .current.p2{background:rgba(255, 0, 0, 0.7);}
+.xxrgame .p1 .edge{background:url('../img/1.png');}
+.xxrgame .p2 .edge{background:url('../img/2.png');}

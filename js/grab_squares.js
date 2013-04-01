@@ -145,7 +145,7 @@
   })();
 
   $(function() {
-    return new GrabSquares('gamepart', 10);
+    return new GrabSquares('gamepart', 6);
   });
 
 }).call(this);

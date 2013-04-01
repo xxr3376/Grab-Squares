@@ -101,4 +101,4 @@ class GrabSquares
 		@updateScore()
 
 $ ->
-	new GrabSquares('gamepart', 10)
+	new GrabSquares('gamepart', 6)
